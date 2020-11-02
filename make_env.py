@@ -11,6 +11,10 @@ for all agents. Each element of the list should be a numpy array,
 of size (env.world.dim_p + env.world.dim_c, 1). Physical actions precede
 communication actions in this array. See environment.py for more details.
 """
+import sys
+from pathlib import Path
+base_dir = Path(__file__).resolve().parent.parent
+sys.path.append(str(base_dir))
 
 def make_env(scenario_name, benchmark=False):
     '''
